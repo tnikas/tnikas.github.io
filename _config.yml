@@ -37,10 +37,12 @@ plugins:
 
 # navbar pages
 navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
+  - slug: index
+    title: Home
+  - slug: publications
+    title: Publications
+  - title: CV
+    url: /CV.pdf
 
 exclude:
   - "gulp"
