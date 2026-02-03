@@ -2,9 +2,9 @@
   {% for item in site.navbar %}
     <li>
       {% if item.url %}
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}">{{ item.title }}</a>
       {% else %}
-        <a href="{{ item.slug | prepend: '/' | relative_url }}">{{ item.title }}</a>
+        <a href="{{ item.slug | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ item.title }}</a>
       {% endif %}
     </li>
   {% endfor %}
