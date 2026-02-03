@@ -37,8 +37,8 @@ plugins:
 
 # navbar pages
 navbar:
-  - slug: index
-    title: Home
+  - title: Home
+    url: /
   - slug: publications
     title: Publications
   - title: CV
