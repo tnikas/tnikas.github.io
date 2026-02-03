@@ -1,11 +1,21 @@
-<ul class="navbar">
-  {% for item in site.navbar %}
-    <li>
-      {% if item.url %}
-        <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}">{{ item.title }}</a>
-      {% else %}
-        <a href="{{ item.slug | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ item.title }}</a>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+<nav class="nav">
+  <div class="container">
+    <h1 class="logo">
+      <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+        {{ site.title_left }}<span>{{ site.title_right }}</span>
+      </a>
+    </h1>
+
+    <ul class="navbar">
+      {% for item in site.navbar %}
+        <li>
+          {% if item.url %}
+            <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}">{{ item.title }}</a>
+          {% else %}
+            <a href="{{ item.slug | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
