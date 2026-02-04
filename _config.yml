@@ -1,6 +1,6 @@
 # Site settings
-title_left    : "Think"
-title_right   : "space" # default: ""
+title_left    : "Themistoklis."
+title_right   : "Nikas" # default: ""
 description   : "Minimalist Jekyll theme for technical writing blog."
 keywords      : "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
 url           : "https://tnikas.github.io" # site url
@@ -37,8 +37,6 @@ plugins:
 
 # navbar pages
 navbar:
-  - title: Home
-    url: /
   - slug: publications
     title: Publications
   - title: CV
