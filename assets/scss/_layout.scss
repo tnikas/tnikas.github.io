@@ -279,6 +279,58 @@ hr {
   margin-top: $base-spacing * 2;
 }
 
+// Publications page styles
+.publication-note {
+  margin-top: $base-spacing * 2;
+  padding: $base-spacing;
+  background-color: lighten($light-gray-color, 12%);
+  border-left: 3px solid $blue-color;
+  border-radius: 3px;
+  
+  small {
+    color: $medium-gray-color;
+    font-style: italic;
+  }
+}
+
+// Enhanced publication list styling
+.page-content {
+  h3 {
+    color: $dark-gray-color;
+    margin-top: $base-spacing * 1.5;
+    margin-bottom: $small-spacing;
+    font-weight: 600;
+  }
+  
+  h2 {
+    color: $dark-gray-color;
+    border-bottom: 2px solid lighten($light-gray-color, 5%);
+    padding-bottom: $small-spacing / 2;
+    margin-top: $base-spacing * 2;
+    margin-bottom: $base-spacing;
+  }
+  
+  p {
+    margin-bottom: $base-spacing;
+    line-height: 1.6;
+    
+    strong {
+      color: $dark-gray-color;
+    }
+  }
+  
+  // Publication links styling
+  a {
+    @extend .link;
+    margin-right: $small-spacing;
+    font-size: rem(13);
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 // This applies from 0px to 600px
 @media (max-width: 600px) {
   .date-label {
