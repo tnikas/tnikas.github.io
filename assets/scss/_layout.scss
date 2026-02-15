@@ -106,8 +106,8 @@ hr {
 
   .intro-grid {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    column-gap: $base-spacing;
+    grid-template-columns: 120px 1fr;
+    column-gap: $small-spacing;
     align-items: start;
   }
 
@@ -118,7 +118,7 @@ hr {
   .intro-photo img {
     display: block;
     width: 100%;
-    max-width: 180px;
+    max-width: 120px;
     border-radius: $base-border-radius;
   }
 
@@ -130,12 +130,12 @@ hr {
 @media screen and (max-width: 700px) {
   .intro {
     .intro-grid {
-      grid-template-columns: 1fr;
-      row-gap: $small-spacing;
+      grid-template-columns: 96px 1fr;
+      column-gap: $small-spacing;
     }
 
     .intro-photo img {
-      max-width: 140px;
+      max-width: 96px;
     }
   }
 }
