@@ -103,6 +103,41 @@ hr {
   .container {
     padding-bottom: 0;
   }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    column-gap: $base-spacing;
+    align-items: start;
+  }
+
+  .intro-photo {
+    margin: 0;
+  }
+
+  .intro-photo img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    border-radius: $base-border-radius;
+  }
+
+  .intro-copy .lead:first-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .intro {
+    .intro-grid {
+      grid-template-columns: 1fr;
+      row-gap: $small-spacing;
+    }
+
+    .intro-photo img {
+      max-width: 140px;
+    }
+  }
 }
 
 .logo {
