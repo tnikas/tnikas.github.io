@@ -40,7 +40,7 @@ navbar:
   - slug: publications
     title: Publications
   - title: CV
-    url: /CV.pdf
+    url: /Themistoklis_Nikas_CV.pdf
 
 exclude:
   - "gulp"
