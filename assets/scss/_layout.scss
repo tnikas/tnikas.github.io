@@ -101,41 +101,50 @@ hr {
   }
 
   .container {
+    position: relative;
     padding-bottom: 0;
   }
 
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    column-gap: $small-spacing;
-    align-items: start;
-  }
-
   .intro-photo {
+    position: absolute;
+    top: 0;
+    left: -130px;
     margin: 0;
   }
 
   .intro-photo img {
     display: block;
-    width: 100%;
-    max-width: 120px;
+    width: 100px;
     border-radius: $base-border-radius;
   }
+}
 
-  .intro-copy .lead:first-child {
-    margin-top: 0;
+@media screen and (max-width: 980px) {
+  .intro {
+    .container {
+      padding-left: 120px;
+    }
+
+    .intro-photo {
+      left: 20px;
+    }
   }
 }
 
 @media screen and (max-width: 700px) {
   .intro {
-    .intro-grid {
-      grid-template-columns: 96px 1fr;
-      column-gap: $small-spacing;
+    .container {
+      padding-left: $base-spacing;
+    }
+
+    .intro-photo {
+      position: static;
+      float: left;
+      margin: 0 12px 8px 0;
     }
 
     .intro-photo img {
-      max-width: 96px;
+      width: 84px;
     }
   }
 }
