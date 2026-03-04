@@ -211,6 +211,14 @@ hr {
     @extend .link;
     font-size: rem(18);
     font-weight: 600;
+    color: $dark-gray-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $dark-gray-color;
+      border-bottom: 2px solid $dark-gray-color;
+    }
   }
 }
 
