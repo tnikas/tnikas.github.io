@@ -19,12 +19,13 @@ title: Home
 
 <section class="post-list">
   <div class="container">
-    {% if site.posts.size > 0 %}
-      {% for post in site.posts %}
+    {% assign news_items = site.data.news | sort: "date" | reverse %}
+    {% if news_items and news_items.size > 0 %}
+      {% for item in news_items %}
         <article class="news-item">
-          <time class="news-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y %b" }}</time>
+          <time class="news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%Y %b" }}</time>
           <div class="news-content">
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+            {{ item.content_html }}
           </div>
         </article>
       {% endfor %}
