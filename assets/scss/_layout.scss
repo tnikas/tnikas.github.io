@@ -106,9 +106,9 @@ hr {
   }
 
   .intro-photo {
-    float: right;
-    margin: 0 0 $small-spacing $base-spacing;
-    text-align: right;
+    float: left;
+    margin: 0 $base-spacing $small-spacing 0;
+    text-align: left;
   }
 
   .intro-photo img {
@@ -126,7 +126,8 @@ hr {
     }
 
     .intro-photo {
-      margin-left: $small-spacing;
+      margin-right: $small-spacing;
+      margin-left: 0;
     }
   }
 }
