@@ -121,6 +121,10 @@ hr {
     margin-bottom: 0;
   }
 
+  > .container > .lead + .lead {
+    margin-top: $base-spacing;
+  }
+
   .intro-photo {
     margin: 0;
     text-align: center;
@@ -205,6 +209,7 @@ hr {
 
   a {
     @extend .link;
+    font-size: rem(18);
   }
 }
 
