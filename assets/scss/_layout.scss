@@ -90,9 +90,6 @@ hr {
 }
 
 .intro {
-  display: grid;
-  grid-template-columns: minmax(160px, 1fr) minmax(0, 800px) minmax(160px, 1fr);
-
   .author-name {
     display: inline-block;
     padding: 0 .2em;
@@ -104,58 +101,51 @@ hr {
   }
 
   > .container {
-    grid-column: 2;
-    max-width: none;
-    margin: 0;
+    max-width: 800px;
     padding-bottom: 0;
   }
 
   .intro-photo {
-    grid-column: 1;
-    justify-self: center;
-    align-self: start;
-    margin: $base-spacing 0 0 0;
-    width: 100%;
-    text-align: center;
+    float: right;
+    margin: 0 0 $small-spacing $base-spacing;
+    text-align: right;
   }
 
   .intro-photo img {
     display: block;
-    width: 210px;
-    margin: 0 auto;
+    width: 190px;
+    margin: 0;
     border-radius: $base-border-radius;
   }
 }
 
 @media screen and (max-width: 980px) {
   .intro {
-    display: block;
-
     > .container {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: $base-spacing;
-      padding-right: $base-spacing;
+      max-width: 720px;
     }
 
     .intro-photo {
-      float: left;
-      margin: 0 14px 8px $base-spacing;
-      width: auto;
-      text-align: left;
+      margin-left: $small-spacing;
     }
   }
 }
 
 @media screen and (max-width: 700px) {
   .intro {
+    > .container {
+      padding-top: $small-spacing;
+    }
+
     .intro-photo {
-      margin-left: $base-spacing;
+      float: none;
+      margin: 0 auto $small-spacing auto;
+      text-align: center;
     }
 
     .intro-photo img {
-      width: 130px;
+      width: 150px;
+      margin: 0 auto;
     }
   }
 }
