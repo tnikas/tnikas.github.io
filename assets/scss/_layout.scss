@@ -222,6 +222,36 @@ hr {
   }
 }
 
+.home-divider {
+  .container {
+    padding-top: $small-spacing;
+    padding-bottom: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid lighten($light-gray-color, 10%);
+    margin: 0;
+  }
+}
+
+.home-section {
+  .container {
+    padding-bottom: $small-spacing;
+  }
+}
+
+.home-section-title {
+  font-size: rem(18);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $medium-gray-color;
+  margin: 0;
+}
+
+.home-empty {
+  color: $medium-gray-color;
+}
+
 .post-item {
   margin-bottom: 0.2em;
   display: block;
