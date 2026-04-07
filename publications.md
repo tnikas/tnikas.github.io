@@ -4,6 +4,8 @@ title: Publications
 permalink: /publications/
 ---
 
+Please see my [Google Scholar](https://scholar.google.com/citations?user=dBImAjsAAAAJ&hl=en&authuser=1&oi=ao) page for an up-to-date list.
+
 ## 2026
 
 Tzimas, S., **Nikas, T.**, Pitoura, E., & Tsaparas, P. (2026). "Minimizing the Cost of Pagerank Fairness." In *WebGraph 2026*.
