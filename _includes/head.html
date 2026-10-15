@@ -7,13 +7,13 @@
   {% assign page_title = '' %}
   {% if page.title == "Home" %}
       {% capture page_title %}
-        {{ site.title_left }}{{ site.title_right }} | {{ site.description }}
+        {{ site.title }} | {{ site.tagline }}
         {%if paginator and paginator.page != 1 %} - {{ paginator.page }}{% endif %}
       {% endcapture %}
   {% else %}
       {% capture page_title %}
           {%if page.slug == 'category' %}Category: {% endif %}
-          {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title_left }}{{ site.title_right }}
+          {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title }}
       {% endcapture %}
   {% endif %}
   {% capture page_title %}
@@ -72,20 +72,51 @@
   <meta property="og:locale" content="en_US">
 
   <!-- Social: Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
+{% if site.twitter_username != "" %}
   <meta name="twitter:site" content="{{ site.twitter_username }}">
+{% endif %}
   <meta name="twitter:title" content="{{ page_title }}">
   <meta name="twitter:description" content="{{ page_description }}">
-  <meta name="twitter:image:src" content="{{ page_image }}">
-
-  <!-- Social: Google+ / Schema.org  -->
-  <meta itemprop="name" content="{{ page_title }}">
-  <meta itemprop="description" content="{{ page_description }}">
-  <meta itemprop="image" content="{{ page_image }}">
+  <meta name="twitter:image" content="{{ page_image }}">
 
   <!-- Canonical link tag -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title_left }}{{ site.title_right }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/favicon.png' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | prepend: site.baseurl | prepend: site.url }}">
+
+{% if site.google_site_verification %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+{% endif %}
+
+{% if page.url == "/" %}
+  <!-- Structured data: tells search engines who this site is about -->
+  {% assign profile_urls = site.author.links | where_exp: "link", "link.url contains 'http'" | map: "url" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": {{ site.title | jsonify }},
+        "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }}
+      },
+      {
+        "@type": "Person",
+        "name": {{ site.author.name | jsonify }},
+        "alternateName": {{ site.author.alternate_name | jsonify }},
+        "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+        "image": {{ page_image | jsonify }},
+        "jobTitle": {{ site.author.job_title | jsonify }},
+        "affiliation": { "@type": "CollegeOrUniversity", "name": {{ site.author.affiliation | jsonify }} },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": {{ site.author.alumni_of | jsonify }} },
+        "sameAs": {{ profile_urls | jsonify }}
+      }
+    ]
+  }
+  </script>
+{% endif %}
 
   <!-- rel prev and next -->
   {% if paginator.previous_page %}

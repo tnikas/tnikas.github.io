@@ -50,3 +50,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# LaTeX build output for the CV (see cv/Themistoklis_Nikas_CV.tex)
+cv/build/

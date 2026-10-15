@@ -146,6 +146,22 @@ hr {
     border-radius: 12px;
     object-fit: cover;
   }
+
+  .intro-links {
+    list-style: none;
+    margin: $base-spacing 0 $small-spacing;
+    padding: 0;
+
+    li {
+      display: inline-block;
+    }
+
+    li:not(:last-child):after {
+      content: "\00B7";
+      margin: 0 .6em;
+      color: $medium-gray-color;
+    }
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -438,10 +454,16 @@ hr {
     @extend .link;
     margin-right: $small-spacing;
     font-size: rem(13);
-    
+
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  // Links inside regular sentences keep the text size
+  .note a {
+    font-size: inherit;
+    margin-right: 0;
   }
 }
 

@@ -8,7 +8,7 @@
       <p class="lead">
         Hi, I’m Themis(toklis) Nikas.<br><br>
         I’m a CS PhD student at Boston University, where I work with Professor
-        <a href="https://aaronmueller.github.io/" target="_blank" rel="noopener"> Aaron Mueller</a>.
+        <a href="https://aaronmueller.github.io/" target="_blank" rel="noopener">Aaron Mueller</a>.
         My research focuses on mechanistic interpretability of large language models (LLMs). I’m interested in how LLMs represent
         uncertainty and how that connects to confidence and calibration.
       </p>
@@ -17,8 +17,14 @@
     <p class="lead">
       Before Boston University, I earned an integrated Master’s degree in Computer Science and Engineering from the University of Ioannina,
       where I worked with Professor
-      <a href="https://www.cs.uoi.gr/~tsap/" target="_blank" rel="noopener"> Panayiotis Tsaparas</a>
+      <a href="https://www.cs.uoi.gr/~tsap/" target="_blank" rel="noopener">Panayiotis Tsaparas</a>
       on link analysis algorithms.
     </p>
+
+    <ul class="intro-links">
+      {%- for link in site.author.links -%}
+        <li><a href="{{ link.url }}"{% unless link.url contains 'mailto:' %} target="_blank" rel="noopener"{% endunless %}>{{ link.title }}</a></li>
+      {%- endfor -%}
+    </ul>
   </div>
 </section>

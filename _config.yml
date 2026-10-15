@@ -1,13 +1,18 @@
 # Site settings
+title         : "Themistoklis Nikas" # used in browser tabs and search results
 title_left    : "Themistoklis."
 title_right   : "Nikas" # default: ""
-description   : "Minimalist Jekyll theme for technical writing blog."
-keywords      : "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
+tagline       : "CS PhD Student at Boston University" # follows your name in the homepage title
+description   : "Themistoklis (Themis) Nikas is a Computer Science PhD student at Boston University working on mechanistic interpretability of large language models."
+keywords      : "Themistoklis Nikas, Themis Nikas, Boston University, computer science, PhD, mechanistic interpretability, large language models, LLMs, uncertainty, calibration"
 url           : "https://tnikas.github.io" # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover         : "" # image uri like logo/cover image for site seo
+cover         : "/assets/images/author.jpg" # image shown in link previews (og:image)
 
-google_analytics  : UA-XXXXX-XX
+# Google Search Console > Add property > URL prefix > "HTML tag" method:
+# uncomment and paste only the value of content="..." from the tag it gives you.
+# google_site_verification: ""
+
 twitter_username  : ""
 comments_enabled  : false # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
@@ -28,12 +33,25 @@ sass:
 
 # Author settings
 author:
-  name     : "Themistoklis Nikas"
+  name           : "Themistoklis Nikas"
+  alternate_name : "Themis Nikas"
+  job_title      : "PhD Student in Computer Science"
+  affiliation    : "Boston University"
+  alumni_of      : "University of Ioannina"
+  # Shown under the intro on the homepage. The http(s) links are also given to
+  # search engines as your other profiles (schema.org "sameAs").
+  links:
+    - title: "tnikas@bu.edu"
+      url: "mailto:tnikas@bu.edu"
+    - title: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=dBImAjsAAAAJ&hl=en"
+    - title: "GitHub"
+      url: "https://github.com/tnikas"
+    - title: "LinkedIn"
+      url: "https://www.linkedin.com/in/tnikas/"
 
 plugins:
   - jekyll-sitemap
-  - bourbon
-  - jekyll-paginate
 
 # navbar pages
 navbar:
@@ -61,3 +79,11 @@ exclude:
   - "script"
   - "vendor"
   - "thinkspace.gemspec"
+  - "cv"
+
+defaults:
+  # Google Search Console ownership file: must stay published, but isn't a page
+  - scope:
+      path: "google60649950c3607a34.html"
+    values:
+      sitemap: false
