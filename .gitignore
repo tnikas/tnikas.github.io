@@ -51,5 +51,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# LaTeX build output for the CV (see cv/Themistoklis_Nikas_CV.tex)
-cv/build/
+# CV LaTeX source: kept local on purpose (it has commented-out private notes); only the PDF is published
+cv/
