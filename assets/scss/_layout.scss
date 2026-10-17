@@ -147,20 +147,41 @@ hr {
     object-fit: cover;
   }
 
-  .intro-links {
+  .intro-icons {
     list-style: none;
-    margin: $base-spacing 0 $small-spacing;
+    margin: $small-spacing 0 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.1em;
 
-    li {
-      display: inline-block;
+    a {
+      display: block;
+      color: $dark-gray-color;
+      border-bottom: none;
+      opacity: .75;
+      transition: opacity $base-duration $base-timing;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        border-bottom: none;
+      }
     }
 
-    li:not(:last-child):after {
-      content: "\00B7";
-      margin: 0 .6em;
-      color: $medium-gray-color;
+    svg {
+      display: block;
+      width: 22px;
+      height: 22px;
     }
+  }
+
+  .intro-email {
+    margin: $base-spacing 0 $small-spacing;
+  }
+
+  .intro-email-address {
+    color: $dark-gray-color;
   }
 }
 
@@ -183,7 +204,7 @@ hr {
     }
 
     .intro-photo {
-      margin: 0 auto $small-spacing auto;
+      margin: 0 auto $base-spacing auto;
       text-align: center;
     }
 
@@ -205,6 +226,7 @@ hr {
   margin: 0 0 1em 0;
   cursor: pointer;
   letter-spacing: 0.8px;
+  word-spacing: -0.35em; // monospace spaces are a full letter wide
   font-size: 28px;
   line-height: 36px;
   font-weight: 300;

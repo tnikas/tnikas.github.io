@@ -37,17 +37,21 @@ author:
   job_title      : "PhD Student in Computer Science"
   affiliation    : "Boston University"
   alumni_of      : "University of Ioannina"
-  # Shown under the intro on the homepage. The http(s) links are also given to
-  # search engines as your other profiles (schema.org "sameAs").
+  # Homepage shows it as "Email: θ@bu.edu, where θ = tnikas"
+  email_user     : "tnikas"
+  email_domain   : "bu.edu"
+  # Icons under the photo (icon = file name in _includes/icons/). These links are
+  # also given to search engines as your other profiles (schema.org "sameAs").
   links:
-    - title: "tnikas@bu.edu"
-      url: "mailto:tnikas@bu.edu"
     - title: "Google Scholar"
+      icon: "scholar"
       url: "https://scholar.google.com/citations?user=dBImAjsAAAAJ&hl=en"
-    - title: "GitHub"
-      url: "https://github.com/tnikas"
     - title: "LinkedIn"
+      icon: "linkedin"
       url: "https://www.linkedin.com/in/tnikas/"
+    - title: "X"
+      icon: "x"
+      url: "https://x.com/memhss"
 
 plugins:
   - jekyll-sitemap

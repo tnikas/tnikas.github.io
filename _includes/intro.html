@@ -3,6 +3,11 @@
     <div class="intro-main">
       <figure class="intro-photo">
         <img src="{{ '/assets/images/author.jpg' | prepend: site.baseurl | prepend: site.url }}" alt="Portrait of Themistoklis Nikas">
+        <ul class="intro-icons">
+          {%- for link in site.author.links -%}
+            <li><a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.title }}" aria-label="{{ link.title }}">{% include icons/{{ link.icon }}.svg %}</a></li>
+          {%- endfor -%}
+        </ul>
       </figure>
 
       <p class="lead">
@@ -21,10 +26,8 @@
       on link analysis algorithms.
     </p>
 
-    <ul class="intro-links">
-      {%- for link in site.author.links -%}
-        <li><a href="{{ link.url }}"{% unless link.url contains 'mailto:' %} target="_blank" rel="noopener"{% endunless %}>{{ link.title }}</a></li>
-      {%- endfor -%}
-    </ul>
+    <p class="intro-email">
+      Email: <span class="intro-email-address">θ@{{ site.author.email_domain }}</span>, where θ = {{ site.author.email_user }}
+    </p>
   </div>
 </section>
