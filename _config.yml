@@ -1,6 +1,6 @@
 # Site settings
 title         : "Themistoklis Nikas" # used in browser tabs and search results
-title_left    : "Themistoklis."
+title_left    : "Themistoklis"
 title_right   : "Nikas" # default: ""
 tagline       : "CS PhD Student at Boston University" # follows your name in the homepage title
 description   : "Themistoklis (Themis) Nikas is a Computer Science PhD student at Boston University working on mechanistic interpretability of large language models."
