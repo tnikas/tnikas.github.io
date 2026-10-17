@@ -2,8 +2,7 @@
 title         : "Themistoklis Nikas" # used in browser tabs and search results
 title_left    : "Themistoklis"
 title_right   : "Nikas" # default: ""
-tagline       : "CS PhD Student at Boston University" # follows your name in the homepage title
-description   : "Themistoklis (Themis) Nikas is a Computer Science PhD student at Boston University working on mechanistic interpretability of large language models."
+description   : "Themistoklis Nikas is a Computer Science PhD student at Boston University working on mechanistic interpretability of large language models."
 keywords      : "Themistoklis Nikas, Themis Nikas, Boston University, computer science, PhD, mechanistic interpretability, large language models, LLMs, uncertainty, calibration"
 url           : "https://tnikas.github.io" # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
