@@ -37,12 +37,12 @@ author:
   job_title      : "PhD Student in Computer Science"
   affiliation    : "Boston University"
   alumni_of      : "University of Ioannina"
-  # Homepage shows it as "Email: θ@bu.edu, where θ = tnikas"
-  email_user     : "tnikas"
-  email_domain   : "bu.edu"
   # Icons under the photo (icon = file name in _includes/icons/). These links are
   # also given to search engines as your other profiles (schema.org "sameAs").
   links:
+    - title: "Email"
+      icon: "email"
+      url: "mailto:tnikas@bu.edu"
     - title: "Google Scholar"
       icon: "scholar"
       url: "https://scholar.google.com/citations?user=dBImAjsAAAAJ&hl=en"
